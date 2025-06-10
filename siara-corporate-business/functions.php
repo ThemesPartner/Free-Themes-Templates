@@ -1,4 +1,4 @@
-
+<?php
 function siaracorporatebusiness_add_design_template_menu() {
     add_theme_page(
         __('Starter Template', 'siaracorporatebusiness'), // page title
