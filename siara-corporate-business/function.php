@@ -1,4 +1,15 @@
 
+function siaracorporatebusiness_add_design_template_menu() {
+    add_theme_page(
+        __('Starter Template', 'siaracorporatebusiness'), // page title
+        __('Starter Template', 'siaracorporatebusiness'), // menu title
+        'edit_theme_options',                      // capability
+        'siaracorporatebusiness-select-template',              // slug
+        'siaracorporatebusiness_render_template_admin_page'    // callback function
+    );
+}
+add_action('admin_menu', 'siaracorporatebusiness_add_design_template_menu');
+
 function siaracorporatebusiness_render_template_admin_page() {
     // Handle form submission
     if (isset($_POST['siaracorporatebusiness_selected_template'])) {
